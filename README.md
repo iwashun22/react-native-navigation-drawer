@@ -4,4 +4,4 @@
 
 > @react-navigation/drawer
 
-[documentation](https://reactnavigation.org/docs/getting-started)
+[documentation](https://reactnavigation.org/docs/drawer-navigator)
