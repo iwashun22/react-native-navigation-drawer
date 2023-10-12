@@ -2,8 +2,10 @@ import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createDrawerNavigator } from '@react-navigation/drawer';
 
+import { pageList } from './src/pages';
 import Home from './src/screens/Home';
 import Article from './src/screens/Article';
+import Notification from './src/screens/Notification';
 
 import Sidebar from './src/components/Sidebar';
 
@@ -13,11 +15,12 @@ export default function App() {
   return (
     <NavigationContainer>
     <Drawer.Navigator 
-      initialRouteName='home'
+      initialRouteName={pageList.home}
       drawerContent={Sidebar}
     >
-      <Drawer.Screen name='home' component={Home}/>
-      <Drawer.Screen name='article' component={Article}/>
+      <Drawer.Screen name={pageList.home} component={Home}/>
+      <Drawer.Screen name={pageList.article} component={Article}/>
+      <Drawer.Screen name={pageList.notification} component={Notification}/>
     </Drawer.Navigator>
     </NavigationContainer>
   )
